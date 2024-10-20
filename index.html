@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Page</title>
-    </head>
-    <body>
-        <!-- Product Name -->
-        <h2>Product Name</h2>
-        
-        <!-- Product Price -->
-        <p>Price: $79.99</p>
-        
-        <!-- Size Options Dropdown -->
-        <label for="size">Choose a size:</label>
-        <select id="size">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-        </select>
-        
-        <!-- Purchase Button -->
-        <button type="button">Purchase</button>
-        </body>
-        </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+</head>
+<body>
+  <!-- Task 1: Product Name and Price Display -->
+  <h2>Hello Kitty Plush</h2>
+  <p id="price">$20</p> <!-- This will display the product price -->
+
+  <!-- Task 2: Size Dropdown for Product Selection -->
+  <select id="size">
+    <!-- The size options with their prices -->
+    <option value="small" data-stock="true">Small - $20 (In Stock)</option>
+    <option value="medium" data-stock="false">Medium - $25 (Out of Stock)</option>
+    <option value="large" data-stock="true">Large - $30 (In Stock)</option>
+  </select>
+
+  <!-- Task 3: Purchase Button -->
+  <button id="purchase">Buy Now</button> <!-- Button to purchase the product -->
+
+  <!-- Link to external JavaScript file (main.js) -->
+  <script src="main.js"></script>
+</body>
+</html>
