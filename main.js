@@ -40,3 +40,17 @@ sizeSelector.onchange = function() {
   // Disable purchase button if out of stock
   purchaseButton.disabled = !isInStock;
 };
+
+// Task 4: Create Checkout Event
+
+// Add event listener to the purchase button
+purchaseButton.onclick = function() {
+    // Check if the purchase button is disabled (out of stock)
+    if (!purchaseButton.disabled) {
+      // If the product is in stock, show a confirmation message
+      alert('Thank you for purchasing the Hello Kitty Plush!');
+    } else {
+      // If the product is out of stock, show an error message
+      alert('Sorry, this size is out of stock and cannot be purchased.');
+    }
+  };
