@@ -54,3 +54,41 @@ purchaseButton.onclick = function() {
       alert('Sorry, this size is out of stock and cannot be purchased.');
     }
   };
+
+  // Task 5: Implement Event Delegation for Dynamic Product List
+const addProductForm = document.getElementById('addProductForm');
+const productList = document.getElementById('productList');
+
+addProductForm.onsubmit = function(event) {
+  event.preventDefault(); // Prevent form from refreshing the page
+
+  const productName = document.getElementById('newProductName').value;
+  const productPrice = document.getElementById('newProductPrice').value;
+  const productStock = document.getElementById('newProductStock').value === 'true';
+
+  // Create a new product element
+  const productDiv = document.createElement('div');
+  productDiv.classList.add('product');
+  productDiv.innerHTML = `
+    <h3>${productName}</h3>
+    <p class="dynamic-price">$${productPrice}</p>
+    <button class="dynamic-purchase" ${!productStock ? 'disabled' : ''}>Buy Now</button>
+  `;
+
+  // Add the new product to the product list
+  productList.appendChild(productDiv);
+
+  // Clear the form inputs
+  addProductForm.reset();
+};
+
+// Event Delegation to handle click events for dynamically added products
+productList.onclick = function(event) {
+  if (event.target.classList.contains('dynamic-purchase')) {
+    if (!event.target.disabled) {
+      alert('Thank you for purchasing the product!');
+    } else {
+      alert('Sorry, this product is out of stock.');
+    }
+  }
+};

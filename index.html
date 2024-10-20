@@ -21,6 +21,22 @@
   <!-- Task 3: Purchase Button -->
   <button id="purchase">Buy Now</button> <!-- Button to purchase the product -->
 
+   <!-- Task 5: Form to dynamically add new products -->
+   <h3>Add a New Product</h3>
+   <form id="addProductForm">
+     <input type="text" id="newProductName" placeholder="Product Name" required>
+     <input type="number" id="newProductPrice" placeholder="Price" required>
+     <select id="newProductStock">
+       <option value="true">In Stock</option>
+       <option value="false">Out of Stock</option>
+     </select>
+     <button type="submit">Add Product</button>
+   </form>
+ 
+   <!-- Task 5: Container to display dynamically added products -->
+   <h3>Product List</h3>
+   <div id="productList"></div>
+
   <!-- Link to external JavaScript file (main.js) -->
   <script src="main.js"></script>
 </body>
