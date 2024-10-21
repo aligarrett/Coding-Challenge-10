@@ -11,32 +11,38 @@
   <p id="price">$20</p> <!-- This will display the product price -->
 
   <!-- Task 2: Size Dropdown for Product Selection -->
+  <label for="size">Select Size:</label> <!-- Label for size dropdown -->
   <select id="size">
     <!-- The size options with their prices -->
-    <option value="small" data-stock="true">Small - $20 (In Stock)</option>
-    <option value="medium" data-stock="false">Medium - $25 (Out of Stock)</option>
-    <option value="large" data-stock="true">Large - $30 (In Stock)</option>
+    <option value="small" data-stock="true">Small - $20</option>
+    <option value="medium" data-stock="false">Medium - $25</option>
+    <option value="large" data-stock="true">Large - $30</option>
   </select>
 
   <!-- Task 3: Purchase Button -->
   <button id="purchase">Buy Now</button> <!-- Button to purchase the product -->
 
-   <!-- Task 5: Form to dynamically add new products -->
-   <h3>Add a New Product</h3>
-   <form id="addProductForm">
-     <input type="text" id="newProductName" placeholder="Product Name" required>
-     <input type="number" id="newProductPrice" placeholder="Price" required>
-     <select id="newProductStock">
-       <option value="true">In Stock</option>
-       <option value="false">Out of Stock</option>
-     </select>
-     <button type="submit">Add Product</button>
-   </form>
- 
-   <!-- Container to display dynamically added products -->
-   <h3>Product List</h3>
-   <div id="productList"></div>
+  <!-- Task 5: Form to dynamically add new products -->
+  <h3>Add a New Product</h3>
+  <form id="addProductForm">
+    <label for="newProductName">Product Name:</label> <!-- Label for new product name input -->
+    <input type="text" id="newProductName" placeholder="Product Name" required>
 
-  <script src="main.js"></script>
+    <label for="newProductPrice">Price:</label> <!-- Label for new product price input -->
+    <input type="number" id="newProductPrice" placeholder="Price" required>
+
+    <label for="newProductStock">Stock Status:</label> <!-- Label for new product stock status dropdown -->
+    <select id="newProductStock">
+      <option value="true">In Stock</option>
+      <option value="false">Out of Stock</option>
+    </select>
+
+    <button type="submit">Add Product</button>
+  </form>
+
+  <h3>Product List</h3>
+  <div id="productList"></div> <!-- Container for dynamically added products -->
+
+  <script src="main.js"></script> <!-- Link to JavaScript file -->
 </body>
 </html>
